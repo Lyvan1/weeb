@@ -10,30 +10,35 @@ import {RouterProvider} from "react-router";
 import About from "./scenes/About.jsx";
 import MainLayout from "./components/global/MainLayout.jsx";
 import Contact from "./scenes/Contact.jsx";
+import LogIn from "./scenes/LogIn.jsx";
 
 function App() {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <MainLayout />,
+            element: <MainLayout/>,
             children: [
                 {
                     path: '/',
-                    element: <Home />
+                    element: <Home/>
                 },
                 {
                     path: '/about',
-                    element: <About />,
+                    element: <About/>,
                 },
                 {
                     path: '/contact',
-                    element: <Contact />
+                    element: <Contact/>
+                },
+                {
+                    path: '/login',
+                    element: <LogIn/>
                 }
             ]
         }
     ])
 
-    return <RouterProvider router={router} />;
+    return <RouterProvider router={router}/>;
 }
 
 export default App
