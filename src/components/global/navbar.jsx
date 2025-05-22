@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
     /*State menu */
@@ -12,14 +13,15 @@ const Navbar = () => {
                     {/* Side part*/}
                     <div className={'flex justify-between w-[293px]'}>
                         {/* Logo */}
-                        <div className="text-xl font-bold">Weeb</div>
+                        <div className="text-xl font-bold">
+                            <Link to={'/'}>Weeb</Link>
+                        </div>
 
                         {/* Desktop Links */}
                         <div className="hidden md:flex items-center space-x-6 font-medium">
-                            <a href="#" className="hover:text-gray-300">About Us</a>
-                            <a href="#" className="hover:text-gray-300">Contact</a>
+                            <Link to={'/about'}>About us</Link>
+                            <Link to={'/contact'}>Contact</Link>
                         </div>
-
                     </div>
 
                     {/* Desktop Auth */}
@@ -46,9 +48,11 @@ const Navbar = () => {
                 {isMenuOpen && (
                     <div
                         className="md:hidden w-1/2 max-w-[1000px] flex items-center flex-col mt-[70px] space-y-2 font-medium absolute bg-[var(--weebPrimaryColor)]">
-                        <a href="#" className="hover:text-gray-300">About Us</a>
-                        <a href="#" className="hover:text-gray-300">Contact</a>
+                        <Link to={'/about'}>About us</Link>
+                        <Link to={'/contact'}>Contact</Link>
+
                         <div className="w-1/2 h-[1px] bg-white my-4"/>
+
                         <a href="#" className="hover:text-gray-300">Log In</a>
                         <a href="#"
                            className="bg-[var(--weebPrimaryColor)] hover:bg-purple-700 px-4 py-2 rounded-lg  w-fit">

@@ -5,25 +5,35 @@ import './App.css'
 import Home from "./scenes/Home.jsx";
 import Navbar from "./components/global/navbar.jsx";
 import Footer from "./components/global/Footer.jsx";
+import {createBrowserRouter} from "react-router-dom";
+import {RouterProvider} from "react-router";
+import About from "./scenes/About.jsx";
+import MainLayout from "./components/global/MainLayout.jsx";
+import Contact from "./scenes/Contact.jsx";
 
 function App() {
-    const [count, setCount] = useState(0)
+    const router = createBrowserRouter([
+        {
+            path: '/',
+            element: <MainLayout />,
+            children: [
+                {
+                    path: '/',
+                    element: <Home />
+                },
+                {
+                    path: '/about',
+                    element: <About />,
+                },
+                {
+                    path: '/contact',
+                    element: <Contact />
+                }
+            ]
+        }
+    ])
 
-    return (
-        <>
-            {/* Navbar component */}
-            <nav>
-                <Navbar />
-            </nav>
-            <main>
-                <Home/>
-            </main>
-            <footer>
-                <Footer/>
-            </footer>
-
-        </>
-    )
+    return <RouterProvider router={router} />;
 }
 
 export default App
