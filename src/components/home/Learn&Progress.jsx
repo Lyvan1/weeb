@@ -7,7 +7,7 @@ import desktopImage from '../../assets/images/desktop.png';
 const LearnProgress = () => {
     return (
         <section
-            className={'h-[640px] sm:mt-[110px] mt-[110px]  md:mt-[0px] lg:mt-[0px] flex lg:flex-row flex-col items-center  lg:w-[1440px]'}>
+            className={'h-[640px] sm:mt-[110px] mt-[110px] px-3 md:mt-[0px] lg:mt-[0px] flex lg:flex-row flex-col items-center  lg:w-[1440px]'}>
 
             {/*Left side*/}
             <div className={'lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start'}>

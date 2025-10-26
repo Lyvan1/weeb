@@ -19,7 +19,7 @@ const Navbar = () => {
 
                         {/* Desktop Links */}
                         <div className="hidden md:flex items-center space-x-6 font-medium">
-                            <Link to={'/about'}>About us</Link>
+                            <Link to={'/about'}>Blog</Link>
                             <Link to={'/contact'}>Contact</Link>
                         </div>
                     </div>
